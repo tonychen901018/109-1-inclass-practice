@@ -1,0 +1,68 @@
+---
+title: "課?<a0>?練習模<e7><89><88>"
+author: "?୳??"
+date: "2020-12-30"
+output: output_format
+params:
+  id: "410973030"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Your code
+
+```{r}
+# Given some information
+R <- 0.09
+M <- 10000
+T <- 3
+# What I need to do
+PDV <- 
+{
+  M/(1+R)**T
+```
+
+
+```{r}
+getPDV <- function(R,M,T) 
+{
+  M/(1+R)**T
+}
+```
+
+```{r}
+getPDV(R=0.09, T=3, M=10000)
+```
+
+```{r}
+# 查詢函數formals arguments要求
+formals(getPDV)
+```
+
+```{r}
+# Given some information
+T <- 3
+# What I need to do
+getPDV2 <- function(R,M){
+  M/(1+R)**T
+}
+```
+
+```{r}
+getPDV2(R=0.12, M=50000)
+debug(getPDV2)
+getPDV2(R=0.12, M=50000)
+undebug(getPDV2)
+```
+```{r}
+globalX <- c(2,5)
+testfun <- function(){
+  globalX[[2]] <- -1
+  invisible(3+globalX)
+}
+testfun()
+globalX
+```
+
